@@ -17,24 +17,42 @@ turtle4 = trtl.Turtle()
 
 #--- Config ---#
 quoteTurtle.penup() # Write quote
-quoteTurtle.write("Belive in yourself! " + name, font=("Ariel", 20, "bold"), align="center")
+quoteTurtle.write("Believe in yourself! " + name, font=("Ariel", 20, "bold"), align="center")
 
 
 #--- Variables ---#
-
+quotes = [
+  "Don't give up!", 
+  "Believe in yourself!", 
+  "Stay positive!", 
+  "Push past failure!",
+  "Be confident!",
+  "Today is tomorrow's yesterday!",
+  "Don't be in the past or future, be in the present!",
+]
 
 #--- Functions ---#
+
+def writeQuote():
+  quoteTurtle.clear()
+  randQuote = rand.randint(0, 6)
+  quoteTurtle.write(quotes[randQuote], font=(("Ariel"), 20, "bold"), align="center")
+  
 def clickT1(x, y):
   cornerTurtle.clickTurtle1(turtle1)
+  writeQuote()
   
 def clickT2(x, y):
   cornerTurtle.clickTurtle2(turtle2)
+  writeQuote()
   
 def clickT3(x, y):
   cornerTurtle.clickTurtle3(turtle3)
+  writeQuote()
   
 def clickT4(x, y):
   cornerTurtle.clickTurtle4(turtle4)
+  writeQuote()
 
 #--- Function Calls --#
 cornerTurtle.initCornerTurtles(turtle1, turtle2, turtle3, turtle4) # Init corner turtle to correct locations.
