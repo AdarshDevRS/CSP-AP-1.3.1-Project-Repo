@@ -43,3 +43,4 @@
 /var/package/*
 !/var/package/*.xml
 
+src/__pycache__
