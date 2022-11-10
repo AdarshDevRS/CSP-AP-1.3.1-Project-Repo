@@ -1,6 +1,7 @@
 import random as rand
 
 colors = ["red", "purple", "green", "blue"]
+
 def initCornerTurtles(t1, t2, t3, t4):
   turtles = [t1, t2, t3, t4]
   
@@ -8,24 +9,24 @@ def initCornerTurtles(t1, t2, t3, t4):
     t.penup()
     t.shape("circle")
     
-  t1.goto()
-  t2.goto()
-  t3.goto()
-  t4.goto()
+  t1.goto(-190, 190)
+  t2.goto(190,190)
+  t3.goto(-190, -190)
+  t4.goto(190, -190)
   
 def clickTurtle1(t):
-    randNum = rand.randint(0, 3)
-    t.color(colors[randNum])
+    randColor = rand.randint(0, 3)
+    t.color(colors[randColor])
   
 def clickTurtle2(t):
-    randNum = rand.randint(0, 3)
-    t.color(colors[randNum])
+    randColor = rand.randint(0, 3)
+    t.color(colors[randColor])
 
 def clickTurtle3(t):
-    randNum = rand.randint(0, 3)
-    t.color(colors[randNum])
+    randColor = rand.randint(0, 3)
+    t.color(colors[randColor])
 
 def clickTurtle4(t):
-    randNum = rand.randint(0, 3)
-    t.color(colors[randNum])
+    randColor = rand.randint(0, 3)
+    t.color(colors[randColor])
     
