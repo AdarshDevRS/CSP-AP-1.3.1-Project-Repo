@@ -3,10 +3,15 @@ import turtle as trtl
 import random as rand
 
 import cornerTurtle
+import background
+
 #--- Input ---#
 name = str(input("What is your name?: "))
 
 #--- Obj ---#
+backgroundTurtle = trtl.Turtle() # Background
+nameTurtle = trtl.Turtle() # Shows name.
+
 quoteTurtle = trtl.Turtle() # Quotes
 quoteTurtle.hideturtle()
 
@@ -14,11 +19,6 @@ turtle1 = trtl.Turtle() # The turtles that will be in the 4 corners.
 turtle2 = trtl.Turtle()
 turtle3 = trtl.Turtle()
 turtle4 = trtl.Turtle()
-
-#--- Config ---#
-quoteTurtle.penup() # Write quote
-quoteTurtle.write("Believe in yourself! " + name, font=("Ariel", 20, "bold"), align="center")
-
 
 #--- Variables ---#
 quotes = [
@@ -33,9 +33,17 @@ quotes = [
 
 #--- Functions ---#
 
+def writeName():
+  nameTurtle.penup()
+  nameTurtle.goto(0, 150)
+  nameTurtle.write("Welcome, " + name, font=(("Ariel"), 20, "bold"), align="center")
+  nameTurtle.hideturtle()
+  
+
 def writeQuote():
   quoteTurtle.clear()
   randQuote = rand.randint(0, 6)
+  quoteTurtle.color("blue")
   quoteTurtle.write(quotes[randQuote], font=(("Ariel"), 20, "bold"), align="center")
   
 def clickT1(x, y):
@@ -55,8 +63,10 @@ def clickT4(x, y):
   writeQuote()
 
 #--- Function Calls --#
+background.initBackground(backgroundTurtle, "red") # Init background
+writeName() # Writing user name.
 cornerTurtle.initCornerTurtles(turtle1, turtle2, turtle3, turtle4) # Init corner turtle to correct locations.
-
+writeQuote() # Writing random quote on start
 
 #--- Events ---#
 turtle1.onclick(clickT1)
