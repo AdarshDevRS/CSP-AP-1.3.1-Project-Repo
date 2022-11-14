@@ -16,6 +16,11 @@ def initCornerTurtles(t1, t2, t3, t4):
   t3.goto(-190, -190)
   t4.goto(190, -190)
   
+  t1.shape("circle")
+  t2.shape("triangle")
+  t3.shape("square")
+  t4.shape("arrow")
+  
 def clickTurtle1(t):
     randColor = rand.randint(0, 2)
     t.color(colors[randColor])
