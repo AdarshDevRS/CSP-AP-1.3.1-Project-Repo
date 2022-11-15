@@ -5,6 +5,11 @@ import random as rand
 colors = ["red", "purple", "green", "blue"] 
 
 def initCornerTurtles(t1, t2, t3, t4):
+  t1.penup()
+  t2.penup()
+  t3.penup()
+  t4.penup()
+  
   t1.goto(-190, 190)
   t2.goto(190,190)
   t3.goto(-190, -190)
