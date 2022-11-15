@@ -1,10 +1,8 @@
 #// Canvas size may be different depending on your device or IDE! Change the numbers as needed.
 
-#// Make sure to set the "rand.randint" to corresponding list range.
 import random as rand
 
 colors = ["red", "purple", "green", "blue"] 
-## REMOVING RED FOR NOW SINCE BACKGROUND IS COLOR RED.
 
 def initCornerTurtles(t1, t2, t3, t4):
   turtles = [t1, t2, t3, t4]
